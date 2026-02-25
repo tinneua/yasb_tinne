@@ -19,3 +19,6 @@ build/
 # Temporary files
 *.tmp
 *.temp
+MEMORY.md
+YASB_CUSTOM_UPDATE_GUIDE.md
+PLANS.md

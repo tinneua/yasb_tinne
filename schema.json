@@ -3896,6 +3896,262 @@
       "title": "EmojiProviderConfig",
       "type": "object"
     },
+    "ExcelRecentsCallbacksConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "on_left": {
+          "default": "toggle_menu",
+          "title": "On Left",
+          "type": "string"
+        },
+        "on_middle": {
+          "default": "toggle_label",
+          "title": "On Middle",
+          "type": "string"
+        },
+        "on_right": {
+          "default": "do_nothing",
+          "title": "On Right",
+          "type": "string"
+        }
+      },
+      "title": "ExcelRecentsCallbacksConfig",
+      "type": "object"
+    },
+    "ExcelRecentsConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "default": "<span>\uf1c3</span>",
+          "title": "Label",
+          "type": "string"
+        },
+        "label_alt": {
+          "default": "<span>\uf1c3</span> {count}",
+          "title": "Label Alt",
+          "type": "string"
+        },
+        "class_name": {
+          "default": "",
+          "title": "Class Name",
+          "type": "string"
+        },
+        "max_items": {
+          "default": 10,
+          "maximum": 20,
+          "minimum": 1,
+          "title": "Max Items",
+          "type": "integer"
+        },
+        "max_title_length": {
+          "default": 40,
+          "maximum": 300,
+          "minimum": 4,
+          "title": "Max Title Length",
+          "type": "integer"
+        },
+        "max_path_length": {
+          "default": 60,
+          "maximum": 500,
+          "minimum": 4,
+          "title": "Max Path Length",
+          "type": "integer"
+        },
+        "hide_missing_files": {
+          "default": true,
+          "title": "Hide Missing Files",
+          "type": "boolean"
+        },
+        "favorites_path": {
+          "default": "",
+          "title": "Favorites Path",
+          "type": "string"
+        },
+        "update_interval": {
+          "default": 300000,
+          "minimum": 0,
+          "title": "Update Interval",
+          "type": "integer"
+        },
+        "menu": {
+          "$ref": "#/$defs/ExcelRecentsMenuConfig",
+          "default": {
+            "blur": true,
+            "round_corners": true,
+            "round_corners_type": "normal",
+            "border_color": "System",
+            "alignment": "center",
+            "direction": "down",
+            "offset_top": 6,
+            "offset_left": 0
+          }
+        },
+        "icons": {
+          "$ref": "#/$defs/ExcelRecentsIconsConfig",
+          "default": {
+            "file": "\uf1c3",
+            "pinned": "\uf08d",
+            "favorite_on": "\uf005",
+            "favorite_off": "\uf006"
+          }
+        },
+        "animation": {
+          "$ref": "#/$defs/AnimationConfig",
+          "default": {
+            "enabled": true,
+            "type": "fadeInOut",
+            "duration": 200
+          }
+        },
+        "container_padding": {
+          "$ref": "#/$defs/PaddingConfig",
+          "default": {
+            "top": 0,
+            "left": 0,
+            "bottom": 0,
+            "right": 0
+          }
+        },
+        "label_shadow": {
+          "$ref": "#/$defs/ShadowConfig",
+          "default": {
+            "enabled": false,
+            "color": "black",
+            "offset": [
+              1,
+              1
+            ],
+            "radius": 3
+          }
+        },
+        "container_shadow": {
+          "$ref": "#/$defs/ShadowConfig",
+          "default": {
+            "enabled": false,
+            "color": "black",
+            "offset": [
+              1,
+              1
+            ],
+            "radius": 3
+          }
+        },
+        "keybindings": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/KeybindingConfig"
+          },
+          "title": "Keybindings",
+          "type": "array"
+        },
+        "callbacks": {
+          "$ref": "#/$defs/ExcelRecentsCallbacksConfig",
+          "default": {
+            "on_left": "toggle_menu",
+            "on_middle": "toggle_label",
+            "on_right": "do_nothing"
+          }
+        }
+      },
+      "title": "ExcelRecentsConfig",
+      "type": "object"
+    },
+    "ExcelRecentsEntry": {
+      "properties": {
+        "type": {
+          "const": "yasb.excel_recents.ExcelRecentsWidget",
+          "title": "Type",
+          "type": "string"
+        },
+        "options": {
+          "$ref": "#/$defs/ExcelRecentsConfig"
+        }
+      },
+      "required": [
+        "type",
+        "options"
+      ],
+      "title": "ExcelRecentsEntry",
+      "type": "object"
+    },
+    "ExcelRecentsIconsConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "file": {
+          "default": "\uf1c3",
+          "title": "File",
+          "type": "string"
+        },
+        "pinned": {
+          "default": "\uf08d",
+          "title": "Pinned",
+          "type": "string"
+        },
+        "favorite_on": {
+          "default": "\uf005",
+          "title": "Favorite On",
+          "type": "string"
+        },
+        "favorite_off": {
+          "default": "\uf006",
+          "title": "Favorite Off",
+          "type": "string"
+        }
+      },
+      "title": "ExcelRecentsIconsConfig",
+      "type": "object"
+    },
+    "ExcelRecentsMenuConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "blur": {
+          "default": true,
+          "title": "Blur",
+          "type": "boolean"
+        },
+        "round_corners": {
+          "default": true,
+          "title": "Round Corners",
+          "type": "boolean"
+        },
+        "round_corners_type": {
+          "default": "normal",
+          "enum": [
+            "normal",
+            "small"
+          ],
+          "title": "Round Corners Type",
+          "type": "string"
+        },
+        "border_color": {
+          "default": "System",
+          "title": "Border Color",
+          "type": "string"
+        },
+        "alignment": {
+          "default": "center",
+          "title": "Alignment",
+          "type": "string"
+        },
+        "direction": {
+          "default": "down",
+          "title": "Direction",
+          "type": "string"
+        },
+        "offset_top": {
+          "default": 6,
+          "title": "Offset Top",
+          "type": "integer"
+        },
+        "offset_left": {
+          "default": 0,
+          "title": "Offset Left",
+          "type": "integer"
+        }
+      },
+      "title": "ExcelRecentsMenuConfig",
+      "type": "object"
+    },
     "ExecOptionsConfig": {
       "additionalProperties": false,
       "properties": {
@@ -15200,6 +15456,9 @@
           },
           {
             "$ref": "#/$defs/DiskEntry"
+          },
+          {
+            "$ref": "#/$defs/ExcelRecentsEntry"
           },
           {
             "$ref": "#/$defs/GithubEntry"
