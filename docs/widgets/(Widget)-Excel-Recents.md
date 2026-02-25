@@ -57,7 +57,7 @@
 
 ```yaml
 excel-recents:
-  type: "yasb.excel_recents.ExcelRecentsWidget"
+  type: "tinneua.excel_recents.ExcelRecentsWidget"
   options:
     label: "<span>\uf1c3</span>"
     label_alt: "<span>\uf1c3</span> {count}"
