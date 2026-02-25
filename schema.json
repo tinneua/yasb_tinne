@@ -4059,7 +4059,7 @@
     "ExcelRecentsEntry": {
       "properties": {
         "type": {
-          "const": "yasb.excel_recents.ExcelRecentsWidget",
+          "const": "tinneua.excel_recents.ExcelRecentsWidget",
           "title": "Type",
           "type": "string"
         },
@@ -15422,6 +15422,9 @@
             "$ref": "#/$defs/KomorebiWorkspacesEntry"
           },
           {
+            "$ref": "#/$defs/ExcelRecentsEntry"
+          },
+          {
             "$ref": "#/$defs/ActiveWindowEntry"
           },
           {
@@ -15456,9 +15459,6 @@
           },
           {
             "$ref": "#/$defs/DiskEntry"
-          },
-          {
-            "$ref": "#/$defs/ExcelRecentsEntry"
           },
           {
             "$ref": "#/$defs/GithubEntry"

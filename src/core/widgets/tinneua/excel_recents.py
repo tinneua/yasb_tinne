@@ -15,7 +15,7 @@ from PyQt6.QtWidgets import QFrame, QHBoxLayout, QLabel, QScrollArea, QVBoxLayou
 from core.config import HOME_CONFIGURATION_DIR
 from core.utils.utilities import PopupWidget, add_shadow, build_widget_label, is_valid_qobject
 from core.utils.widgets.animation_manager import AnimationManager
-from core.validation.widgets.yasb.excel_recents import ExcelRecentsConfig
+from core.validation.widgets.tinneua.excel_recents import ExcelRecentsConfig
 from core.widgets.base import BaseWidget
 
 
