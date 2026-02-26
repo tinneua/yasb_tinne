@@ -40,6 +40,7 @@
     - [Open Meteo](./(Widget)-Open-Meteo)
     - [Server Monitor](./(Widget)-Server-Monitor)
     - [Systray](./(Widget)-Systray)
+    - [Systray Popup](./(Widget)-Systray-Popup)
     - [Todo](./(Widget)-Todo)
     - [Traffic](./(Widget)-Traffic)
     - [Taskbar](./(Widget)-Taskbar)
